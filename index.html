@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeeGo - Mix & Match Fashion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>WeeGo</h1>
+    <p>Mix & Match pakaian favoritmu!</p>
+  </header>
+
+  <section class="filters">
+    <label>Color Palette:
+      <select id="colorFilter">
+        <option value="">Semua Warna</option>
+        <option value="putih">Putih</option>
+        <option value="hitam">Hitam</option>
+        <option value="nude">Nude</option>
+        <option value="biru">Biru</option>
+      </select>
+    </label>
+    <label>Style Fashion:
+      <select id="styleFilter">
+        <option value="">Semua Style</option>
+        <option value="formal">Formal</option>
+        <option value="kasual">Kasual</option>
+        <option value="streetwear">Streetwear</option>
+      </select>
+    </label>
+  </section>
+
+  <section id="catalog">
+    <h2>Rekomendasi Pakaian</h2>
+    <div id="itemsContainer" class="item-grid"></div>
+  </section>
+
+  <section id="favorites">
+    <h2>Favorit Saya</h2>
+    <div id="favoritesContainer" class="item-grid"></div>
+  </section>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  
+  <div class="item" onclick="openPreview('item1')">
+    <!-- Gambar dan info item -->
+    <img src="path/to/item-image.jpg" alt="Item">
+    <h4>Nama Item</h4>
+</div>
+
+<!-- Modal (Popup Preview) -->
+<div id="previewModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closePreview()">&times;</span>
+        <div id="previewDetails">
+            <!-- Detail preview item akan ditampilkan di sini -->
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
